@@ -1,0 +1,118 @@
+
+#sect1 {  
+    height: 650 px;  
+    color: #fff;background-image: url("https://http2.mlstatic.com/D_NQ_NP_817524-MLB45142586106_032021-V.jpg");
+    background-size: 100%;  
+    background-size: cover; 
+}   
+
+table{
+    margin-left: 50px;
+    margin-top: 20px;
+    width: 60%;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+.mat-column-id {
+    width: 32px;
+    padding-right: 24px;
+    text-align: center;
+}
+
+.mat-column-name {
+    padding-right: 24px;
+    text-align: center;
+}
+.mat-column-resumo {
+    
+    padding-right: 24px;
+    text-align: center;
+}
+
+.mat-column-capa {
+    width: 32px;
+    padding-right: 24px;
+    text-align: center;
+}
+
+.mat-column-personagem {
+    padding-right: 24px;
+    text-align: center;
+}
+
+.mat-column-duracao {
+    padding-right: 24px;
+    text-align: center;
+}
+
+.mat-tab{
+    font-size: 20px;
+}
+
+.example-card {
+
+    max-width: 350px;
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+  
+  .example-header-image {
+ 
+    margin-left: 20px;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlNsko0SvZNph1Nw_tvcGmDzlIOYStCDhJ4w&usqp=CAU');
+    background-size: cover;
+  }
+
+.example-card-2 {
+    
+    max-width: 350px;
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+  
+  .example-header-image-2 {
+    
+    margin-left: 20px;
+    background-image: url('https://i.pinimg.com/736x/78/5f/f5/785ff5b30fb4850e04a9c1973ab9b3b4.jpg');
+    background-size: cover;
+  }
+
+  section {
+    display: table;
+  }
+  
+  .example-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 120px;
+  }
+  
+  .example-button-row {
+    display: table-cell;
+    max-width: 600px;
+  }
+  
+  .example-button-row .mat-mdc-button-base {
+    margin: 8px 8px 8px 0;
+  }
+  
+  .example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+  }
+
+  .new{
+    margin-top: 10px;
+    margin-left: 50px;
+  }

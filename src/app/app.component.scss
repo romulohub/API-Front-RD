@@ -1,0 +1,60 @@
+
+body{
+    background-color: black;
+}
+
+.faind___container_body {
+    display: flex;
+    background-color: black;
+    flex-direction: column;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left:0;
+    right: 0;
+}
+
+.faind___toolbar{
+    position: flex;
+    z-index: 2;
+}
+
+.faind___mat-sidenav-container{
+    flex:1;
+    margin-top: 0px;
+    background-image: url("https://images5.alphacoders.com/487/487192.png");
+    background-size: 100%;
+    
+}
+
+section {
+    display: table;
+  }
+  
+  .example-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 120px;
+  }
+  
+  .example-button-row {
+    display: table-cell;
+    max-width: 600px;
+  }
+  
+  .example-button-row .mat-mdc-button-base {
+    margin: 8px 8px 8px 0;
+  }
+  
+  .example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+  }

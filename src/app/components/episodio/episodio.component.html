@@ -1,0 +1,26 @@
+<div className="inputs">    
+    <mat-form-field appearance="outline" class="full-width" col-50>
+      <mat-label>Nome Ep</mat-label>
+      <input matInput placeholder="preencha o nome do episodio" [(ngModel)]="model.name" required>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="full-width" col-50>
+        <mat-label>Resumo</mat-label>
+        <input matInput placeholder="coloque o resumo do episodio" [(ngModel)]="model.resumo" required>
+      </mat-form-field>
+    <mat-form-field appearance="outline" class="full-width" col-50>
+        <mat-label>Capa</mat-label>
+        <input matInput type="number" placeholder="coloque o resumo do episodio" [(ngModel)]="model.capa" required>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="full-width" col-50>
+        <mat-label>Personagem</mat-label>
+        <input matInput placeholder="preencha o nome do personagem" [(ngModel)]="model.personagem" required>
+      </mat-form-field>    
+      <mat-form-field appearance="outline" class="full-width" col-50>
+        <mat-label>Duracao</mat-label>
+        <input matInput type="number" placeholder="preencha a duracao do episodio" [(ngModel)]="model.duracao" required>
+      </mat-form-field>       
+    <div class="toolbar___form">
+      <button mat-raised-button routerLink="/episodios">Cancelar</button>
+      <button mat-raised-button color="primary" (click)="save()">Salvar</button>
+    </div>
+  </div>

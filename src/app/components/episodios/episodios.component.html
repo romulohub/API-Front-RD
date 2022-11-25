@@ -1,0 +1,117 @@
+<div id="sect1">
+    <p>
+      <mat-toolbar>
+        <span>Lista de episodios do Naruto</span>
+      </mat-toolbar>
+    </p>
+    </div>
+    
+<div>
+  <mat-tab-group backgroundColor="primary" mat-align-tabs="start">
+   <!-- Tela de exclusão e edição de valores -->
+   
+   <mat-tab label="Novos/Alterar/Excluir Episodios">
+      
+    <button class="new" mat-raised-button color="primary" routerLink="/Episodio/new">Novo Episodio</button>
+
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef> N° Ep </th>
+          <td mat-cell *matCellDef="let element"> {{element.id}} </td>    
+        </ng-container>
+      
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef> Nome Ep </th>
+          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+      
+        <!-- Resumo Column -->
+        <ng-container matColumnDef="resumo">
+          <th mat-header-cell *matHeaderCellDef> Resumo </th>
+          <td mat-cell *matCellDef="let element"> {{element.resumo}} </td>
+        </ng-container>
+      
+        <!-- Personagem Column -->
+        <ng-container matColumnDef="personagem">
+          <th mat-header-cell *matHeaderCellDef> Personagem </th>
+          <td mat-cell *matCellDef="let element"> {{element.personagem}} </td>
+        </ng-container>
+      
+        <!-- Duracao Column -->
+        <ng-container matColumnDef="duracao">
+          <th mat-header-cell *matHeaderCellDef> Duracao do Ep </th>
+          <td mat-cell *matCellDef="let element"> {{element.duracao}} </td>
+        </ng-container>
+    
+         <!-- Excluir Column -->
+         <ng-container matColumnDef="Excluir">
+          <th mat-header-cell *matHeaderCellDef> Excluir </th>
+          <td mat-cell *matCellDef="let element"> 
+            <button mat-icon-button color="warn" (click)="delete(element)">
+              <mat-icon>delete_forever</mat-icon>
+        </button>
+          </td>
+        </ng-container>
+    
+        <!-- Edit Column -->
+        <ng-container matColumnDef="Editar">
+          <th mat-header-cell *matHeaderCellDef> Editar </th>
+          <td mat-cell *matCellDef="let element">
+            <button mat-icon-button routerLink="/Episodio/{{ element.id }}">
+            <mat-icon>create</mat-icon>  
+            </button>
+          </td>    
+        </ng-container>
+    
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table></mat-tab>
+
+
+    
+      <mat-tab label="Episodios">
+    
+        <mat-card class="example-card">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>Apresentando! Uzumaki Naruto</mat-card-title>
+            <mat-card-subtitle>Naruto</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="https://preview.redd.it/igvk45b59tq51.jpg?auto=webp&s=6d46205357abde7d9b3b681c41529c38ce27dbe9">
+          <mat-card-content>
+            <p>
+              Naruto uzumaki da o gás
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>Assistir</button>
+          </mat-card-actions>
+        </mat-card>
+     
+        <mat-card class="example-card-2">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image-2"></div>
+            <mat-card-title>Eu Sou o Konohamaru!</mat-card-title>
+            <mat-card-subtitle>Konohamaru</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="data:image/jpeg;base64,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">
+          <mat-card-content>
+            <p>
+              Naruto se torna sensei do konohamaru
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>Assistir</button>
+          </mat-card-actions>
+        </mat-card>
+    </mat-tab>
+    
+    
+    
+ 
+    </mat-tab-group>
+    </div>
+    
